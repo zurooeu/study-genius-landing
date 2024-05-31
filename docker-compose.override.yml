@@ -1,0 +1,8 @@
+services:
+  frontend:
+    ports:
+      - 8099:80
+
+networks:
+  npm-nw:
+    external: false

@@ -1,0 +1,11 @@
+services:
+  frontend:
+    image: '${DOCKER_IMAGE_FRONTEND?Variable not set}:${TAG-latest}'
+    restart: always
+    networks:
+      - npm-nw
+      - default
+
+networks:
+  npm-nw:
+    external: true
