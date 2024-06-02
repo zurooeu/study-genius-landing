@@ -2,12 +2,5 @@ services:
   landing-front:
     image: '${DOCKER_IMAGE_FRONTEND?Variable not set}:${TAG-latest}'
     restart: always
-    networks:
-      - npm-nw
-      - default
     build:
       context: ./landing
-
-networks:
-  npm-nw:
-    external: true
